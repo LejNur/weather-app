@@ -28,7 +28,7 @@
         <fa-icon [icon]="faSun" size="3x" style="color: #FFD43B;"></fa-icon>
         } @else if(weatherCode[$index] >= 1 && weatherCode[$index] <= 50) { <fa-icon [icon]="faCloudSun" size="3x"
           style="color: #c9e1f2;"></fa-icon>
-          } @else if (weatherCode[$index] > 50 && weatherCode[$index] < 70) { <fa-icon [icon]="faCloudRain" size="3x"
+          } @else if (weatherCode[$index] > 50 && weatherCode[$index] <= 80) { <fa-icon [icon]="faCloudRain" size="3x"
             style="color: #9ed5ff;"></fa-icon>
             } @else {
             <fa-icon [icon]="faSnowflake" size="3x" style="color: #ffffff;"></fa-icon>

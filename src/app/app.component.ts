@@ -89,7 +89,7 @@ export class AppComponent implements OnInit {
       this.weatherCode = res.data.daily.weather_code;
       this.wind = res.data.daily.wind_speed_10m_max;
 
-      // console.log(res.data);
+      console.log(this.weatherCode);
     });
   }
 }
