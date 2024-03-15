@@ -61,12 +61,12 @@ export class AppComponent implements OnInit {
   ngOnInit() {}
 
   onSearchCities(input: string) {
-    // console.log(input);
+    
     let res = this.api.cityApi(input);
 
     res
       .then((res) => {
-        // console.log('city page', res.data.results[0]);
+        
         this.dataItem = res.data.results[0];
         this.latitude = res.data.results[0].latitude;
         this.longitude = res.data.results[0].longitude;
@@ -89,7 +89,7 @@ export class AppComponent implements OnInit {
       this.weatherCode = res.data.daily.weather_code;
       this.wind = res.data.daily.wind_speed_10m_max;
 
-      console.log(this.weatherCode);
+      
     });
   }
 }
