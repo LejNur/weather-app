@@ -10,11 +10,11 @@
 
 
 
-<div class="flex flex-row flex-wrap justify-around mt-8 mx-8 ">
+<div class="grid grid-cols-1 auto-cols-max sm:grid-cols-2 md:grid-cols-3 items-center mt-8 mx-8 ">
 
   @for(temp of maxTemperature; track $index) {
 
-  <div class="w-64 h-fit rounded-lg overflow-hidden shadow-lg space-x-2 my-8 bg-teal-600/75 ">
+  <div class="w-72 h-fit rounded-lg overflow-hidden shadow-lg space-x-2 my-8 bg-teal-600/75 mx-auto ">
 
     <div class="px-6 py-4 text-center">
 
@@ -26,12 +26,12 @@
 
         @if(weatherCode[$index] === 0) {
         <fa-icon [icon]="faSun" size="3x" style="color: #FFD43B;"></fa-icon>
-        } @else if(weatherCode[$index] >= 1 && weatherCode[$index] <= 50) { <fa-icon [icon]="faCloudSun" size="3x"
+        } @else if(weatherCode[$index] >= 1 && weatherCode[$index] <= 50) { <fa-icon [icon]="faCloudSun" size="5x"
           style="color: #c9e1f2;"></fa-icon>
-          } @else if (weatherCode[$index] > 50 && weatherCode[$index] <= 80) { <fa-icon [icon]="faCloudRain" size="3x"
+          } @else if (weatherCode[$index] > 50 && weatherCode[$index] <= 80) { <fa-icon [icon]="faCloudRain" size="5x"
             style="color: #9ed5ff;"></fa-icon>
             } @else {
-            <fa-icon [icon]="faSnowflake" size="3x" style="color: #ffffff;"></fa-icon>
+            <fa-icon [icon]="faSnowflake" size="5x" style="color: #ffffff;"></fa-icon>
             }
 
             <p class="font-sans font-bold text-3xl text-white mt-2">{{temp}}{{unitTemp}}</p>
